@@ -1,0 +1,24 @@
+/**
+* * Card Category
+*/
+.card-category {
+    & + & {
+        padding-top: 60px;
+        border-top: 2px solid lightgray;
+        margin-top: 60px;
+    }
+
+    .card__heading {
+        margin-bottom: 60px;
+    }
+
+    .card__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card__description {
+        max-width: 480px;
+    }
+}

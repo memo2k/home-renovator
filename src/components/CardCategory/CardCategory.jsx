@@ -1,11 +1,11 @@
 import React from 'react';
 import "./card-category.scss";
 
-const CardCategory = ({ heading, description, ...props }) => {
+const CardCategory = ({ data, ...props }) => {
   return (
     <div className="card-category" {...props}>
         <div className="card__heading">
-            <h1>{heading}</h1>
+            <h1>{data.heading}</h1>
         </div>
 
         <div className="card__bottom">
@@ -14,7 +14,7 @@ const CardCategory = ({ heading, description, ...props }) => {
             </div>
 
             <div className="card__description">
-                <p>{description}</p>
+                <p>{data.description}</p>
             </div>
         </div>
     </div>

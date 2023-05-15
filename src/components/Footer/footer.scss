@@ -1,0 +1,27 @@
+/**
+* * Footer
+*/
+.footer {
+    padding-bottom: 5rem;
+    .footer__heading {
+        margin-bottom: 20px;
+    }
+
+    .footer__address, .footer__description {
+        margin-bottom: 20px;
+    }
+
+    .footer__links {
+        a {
+            color: #0864dc;
+        }
+
+        li + li {
+            margin-top: 10px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}

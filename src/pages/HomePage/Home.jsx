@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./home.scss";
-import bathroomImg from "../../assets/images/bathroom.jpg";
 import CardCategory from '../../components/CardCategory/CardCategory';
+import CardChooseUs from '../../components/CardChooseUs/CardChooseUs';
+import Testimonial from '../../components/Testimonial/Testimonial';
+
+import bathroomImg from "../../assets/images/bathroom.jpg";
 import livingroomImg from "../../assets/images/livingroom.jpg";
 import homeImg from "../../assets/images/home.jpg";
-import CardChooseUs from '../../components/CardChooseUs/CardChooseUs';
+import carouselImg1 from "../../assets/images/carousel-bathroom.jpg";
+import carouselImg2 from "../../assets/images/carousel-livingroom.jpg";
+import carouselImg3 from "../../assets/images/carousel-livingroom2.jpg";
+import backgroundImg from "../../assets/images/background.jpg";
 
 // Props for CardCategory
 const cardCategoryProps = [
@@ -111,7 +117,53 @@ const cardChooseUsProps = [
     }
 ]
 
+// Props for Carousel
+const carouselProps = [
+    {
+        image: carouselImg1,
+        heading: "My Dream Bathroom",
+        description: "From the moment we first engaged with Home Renovator for design and concept ideas, right through to project completion, we have been impressed and compeltely satisfied with their professionalism, quality of work, and consistent communication throughout. Would happily recommend Home Renovator for any future projects.",
+        author: "Samatha Jones"
+    },
+    {
+        image: carouselImg2,
+        heading: "Exceptional Home Transformations",
+        description: "Home Renovator is the go-to company for turning houses into incredible dream homes. The team's communication and project management are seamless, ensuring a stress-free renovation experience. With Home Renovator, you can expect exceptional results that will surpass your expectations.",
+        author: "Michael Smith"
+    },
+    {
+        image: carouselImg3,
+        heading: "Turning Visions into Reality",
+        description: "Home Renovator exceeded my expectations with their expertise and commitment to customer satisfaction. Their attention to detail and personalized approach transformed my home into a space I truly love. Highly recommended for anyone seeking a reliable and professional home renovation company.",
+        author: "Gabriel Walker"
+    }
+]
+
 const Home = () => {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [disabledLeftButton, setDisabledLeftButton] = useState(true);
+    const [disabledRightButton, setDisabledRightButton] = useState(false);
+
+    const prevSlide = () => {
+        if (activeIndex < 1) {
+            setDisabledLeftButton(true);
+        } else {
+            setActiveIndex(activeIndex - 1);
+            setDisabledLeftButton(activeIndex - 1 === 0);
+            setDisabledRightButton(false);
+        }
+    }
+
+    const nextSlide = () => {
+        if (activeIndex === carouselProps.length - 1) {
+            setDisabledRightButton(true);
+        } else {
+            setActiveIndex(activeIndex + 1);
+            setDisabledLeftButton(false);
+            setDisabledRightButton(activeIndex + 1 === carouselProps.length - 1);
+        }
+    }
+
     return (
         <>
             <section className="hero">
@@ -149,10 +201,9 @@ const Home = () => {
                 <div className="shell">
                     <div className="categories__inner">
                         <div className="categories__cards">
-                            <CardCategory {...cardCategoryProps[0]} />
-                            <CardCategory {...cardCategoryProps[1]} />
-                            <CardCategory {...cardCategoryProps[2]} />
-                            <CardCategory {...cardCategoryProps[3]} />
+                            {cardCategoryProps.map((item, idx) => {
+                                return <CardCategory data={item} key={idx} />
+                            })}
                         </div>
 
                         <div className="categories__images">
@@ -181,14 +232,53 @@ const Home = () => {
 
                         <div className="choose-us__cards">
                             <div className="grid">
-                                <CardChooseUs {...cardChooseUsProps[0]} />
-                                <CardChooseUs {...cardChooseUsProps[1]} />
-                                <CardChooseUs {...cardChooseUsProps[2]} />
-                                <CardChooseUs {...cardChooseUsProps[3]} />
-                                <CardChooseUs {...cardChooseUsProps[4]} />
-                                <CardChooseUs {...cardChooseUsProps[5]} />
+                                {cardChooseUsProps.map((item, idx) => {
+                                    return <CardChooseUs data={item} key={idx} />
+                                })}
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="carousel">
+                <div className="shell">
+                    <div className="carousel__inner">
+                        <div className="carousel__subheading">
+                            <h2>Testimonials</h2>
+                        </div>
+
+                        <div className="carousel__heading">
+                            <h1>What Our Customers are Saying</h1>
+                        </div>
+
+                        <div className="carousel__testimonials">
+                            <Testimonial activeIndex={activeIndex} carouselProps={carouselProps} />
+                        </div>
+
+                        <div className="carousel__buttons">
+                            <button onClick={prevSlide} disabled={disabledLeftButton} 
+                            className={disabledLeftButton ? 'btn btn--carousel btn--disabled' : 'btn btn--carousel'}>
+                                <i className="fa-solid fa-angle-left fa-xl"></i>
+                            </button>
+
+                            <button onClick={nextSlide} disabled={disabledRightButton} 
+                            className={disabledRightButton ? 'btn btn--carousel btn--disabled' : 'btn btn--carousel'}>
+                                <i className="fa-solid fa-angle-right fa-xl"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section className="contact" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${backgroundImg})` }}>
+                <div className="contact__inner">
+                    <div className="contact__title">
+                        <h1>Want to make your dream home come true? Here is your chance!</h1>
+                    </div>
+
+                    <div className="contact__button">
+                        <button className="btn btn--dark-blue">Request a Quote</button>
                     </div>
                 </div>
             </section>

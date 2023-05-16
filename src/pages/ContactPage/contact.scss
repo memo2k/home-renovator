@@ -1,0 +1,70 @@
+/**
+* * Contact Form
+*/
+.contact-form {
+    padding: 10rem 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/**
+* * Form
+*/
+.form {
+    .form__heading {
+        margin-bottom: 50px;
+
+        .form__title {
+            margin-bottom: 20px;
+        }
+
+        .form__description {
+            font-size: 1.5rem;
+        }
+    }
+    
+    .form__body {
+        margin-bottom: 50px;
+
+        .form__row {
+            display: flex;
+        }
+
+        .form__field {
+            width: 100%;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            outline: none;
+            transition: .2s;
+            border: 1px solid lightgray;
+        }
+
+        input:focus, textarea:focus {
+            border: 1px solid #0864dc;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        label, input {
+            display: block;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        .form__field + .form__field {
+            margin-left: 20px;
+        }
+
+        .form__row + .form__row {
+            margin-top: 30px;
+        }
+    }
+}

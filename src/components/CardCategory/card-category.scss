@@ -25,6 +25,9 @@
 
 @media (max-width: 1400px) {
     .card-category {
+        .card__heading {
+            margin-bottom: 20px;
+        }
 
         .card__subheading {
             display: none;

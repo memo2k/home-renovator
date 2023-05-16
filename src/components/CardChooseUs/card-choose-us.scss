@@ -10,3 +10,11 @@
         margin-bottom: 10px;
     }
 }
+
+@media (max-width: 768px) {
+    .card-choose-us {
+        .card__icon {
+            margin-bottom: 10px;
+        }
+    }
+}

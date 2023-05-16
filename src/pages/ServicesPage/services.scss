@@ -1,0 +1,57 @@
+/**
+* * Services
+*/
+.services {
+    padding-top: 10rem;
+    
+    .services__heading, .services__subheading {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+
+/**
+* * Card Services
+*/
+.card-services {
+    display: flex;
+    justify-content: space-between;
+    height: 650px;
+
+    .card__images {
+        position: relative;
+        width: 50%;
+
+        .card__image {
+            position: absolute;
+            width: 400px;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 30px;
+            }
+        }
+
+        .card__image:first-child {
+            top: 40px;
+            left: 30px;
+        }
+
+        .card__image:last-child {
+            bottom: 40px;
+            right: 30px;
+        }
+    }
+
+    .card__description {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .card__heading {
+            margin-bottom: 30px;
+        }
+    }
+}

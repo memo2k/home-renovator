@@ -127,30 +127,3 @@
         transform: translateX(-50%);
     }
 }
-
-/**
-* * Contact
-*/
-.contact {
-    margin-top: 15rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 500px;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    
-    .contact__inner {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-width: 700px;
-        margin: 0 auto;
-    }
-
-    .contact__title {
-        margin-bottom: 50px;
-    }
-}

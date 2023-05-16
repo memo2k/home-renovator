@@ -3,6 +3,8 @@ import "./home.scss";
 import CardCategory from '../../components/CardCategory/CardCategory';
 import CardChooseUs from '../../components/CardChooseUs/CardChooseUs';
 import Testimonial from '../../components/Testimonial/Testimonial';
+import ContactSection from '../../components/ContactSection/ContactSection';
+import { Link } from 'react-router-dom';
 
 import bathroomImg from "../../assets/images/bathroom.jpg";
 import livingroomImg from "../../assets/images/livingroom.jpg";
@@ -10,7 +12,6 @@ import homeImg from "../../assets/images/home.jpg";
 import carouselImg1 from "../../assets/images/carousel-bathroom.jpg";
 import carouselImg2 from "../../assets/images/carousel-livingroom.jpg";
 import carouselImg3 from "../../assets/images/carousel-livingroom2.jpg";
-import backgroundImg from "../../assets/images/background.jpg";
 
 // Props for CardCategory
 const cardCategoryProps = [
@@ -186,7 +187,7 @@ const Home = () => {
                             </div>
 
                             <div className="hero__button">
-                                <button className="btn btn--dark-blue">Request a Quote</button>
+                                <Link to="/work" className="btn btn--dark-blue">See Our Work</Link>
                             </div>
                         </div>
 
@@ -271,17 +272,7 @@ const Home = () => {
                 </div>
             </section>
             
-            <section className="contact" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${backgroundImg})` }}>
-                <div className="contact__inner">
-                    <div className="contact__title">
-                        <h1>Want to make your dream home come true? Here is your chance!</h1>
-                    </div>
-
-                    <div className="contact__button">
-                        <button className="btn btn--dark-blue">Request a Quote</button>
-                    </div>
-                </div>
-            </section>
+            <ContactSection />
         </>
     )
 }

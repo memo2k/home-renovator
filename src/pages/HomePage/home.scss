@@ -114,10 +114,7 @@
     }
 
     .carousel__testimonials {
-        height: 600px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
+        min-height: 600px;
     }
 
     .carousel__buttons {
@@ -125,5 +122,75 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 1400px) {
+    // Hero
+    .hero {
+        padding-top: 8rem;
+
+        .hero__inner {
+            display: block;
+        }
+
+        .hero__description {
+            margin-bottom: 30px;
+        }
+
+        .hero__description, .hero__image {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .hero__heading, .hero__paragraph {
+            margin: 0 auto;
+        }
+        
+        .hero__description {
+            .hero__subheading, .hero__heading {
+                margin-bottom: 10px;
+            }
+
+            .hero__heading {
+                line-height: 60px;
+            }
+        }
+    }
+
+    // Categories
+    .categories {
+        padding-top: 5rem;
+
+        .categories__inner {
+            display: block;
+        }
+
+        .categories__cards {
+            width: 100%;
+            padding-right: 0;
+        }
+
+        .categories__images {
+            display: none;
+        }
+    }
+
+    // Choose us
+    .choose-us {
+        padding-top: 5rem;
+
+        .choose-us__subheading, .choose-us__heading {
+            margin-bottom: 10px;
+        }
+    }
+
+    // Carousel
+    .carousel {
+        padding-top: 5rem;
+
+        .carousel__subheading {
+            margin-bottom: 10px;
+        }
     }
 }

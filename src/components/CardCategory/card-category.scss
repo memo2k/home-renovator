@@ -22,3 +22,12 @@
         max-width: 480px;
     }
 }
+
+@media (max-width: 1400px) {
+    .card-category {
+
+        .card__subheading {
+            display: none;
+        }
+    }
+}

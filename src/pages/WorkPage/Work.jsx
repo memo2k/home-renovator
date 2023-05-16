@@ -8,6 +8,7 @@ import livingroomImg2 from "../../assets/images/services-livingroom1.jpg";
 import bathroomImg2 from "../../assets/images/services-bathroom2.jpg"
 import poolImg from "../../assets/images/services-pool.jpg";
 import CardGallery from '../../components/CardGallery/CardGallery';
+import ContactSection from '../../components/ContactSection/ContactSection';
 
 const galleryProps = [
     {
@@ -38,25 +39,30 @@ const galleryProps = [
 
 const Work = () => {
   return (
-    <section className="work">
-        <div className="shell">
-            <div className="work__inner">
-                <div className="work__subheading">
-                    <h2>Previous Works</h2>
-                </div>
+    <>
+        <section className="work">
+            <div className="shell">
+                <div className="work__inner">
+                    <div className="work__subheading">
+                        <h2>Previous Works</h2>
+                    </div>
 
-                <div className="work__heading">
-                    <h1>Work Gallery</h1>
-                </div>
+                    <div className="work__heading">
+                        <h1>Work Gallery</h1>
+                    </div>
 
-                <div className="grid">
-                    {galleryProps.map((item, index) => {
-                        return <CardGallery data={item} key={index} />
-                    })}
+                    <div className="grid">
+                        {galleryProps.map((item, index) => {
+                            return <CardGallery data={item} key={index} />
+                        })}
+                    </div>
+
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <ContactSection />
+    </>
   )
 }
 

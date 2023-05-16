@@ -1,6 +1,5 @@
 import React from 'react';
 import "./services.scss";
-import CardServices from "../../components/CardServices/CardServices";
 import ContactSection from '../../components/ContactSection/ContactSection';
 
 import makeoverImg1 from "../../assets/images/services-pool.jpg";

@@ -1,6 +1,7 @@
 import React from 'react';
 import "./contact-section.scss";
 import backgroundImg from "../../assets/images/background.jpg";
+import { Link } from 'react-router-dom';
 
 const ContactSection = () => {
     return (
@@ -11,7 +12,7 @@ const ContactSection = () => {
                 </div>
 
                 <div className="contact__button">
-                    <button className="btn btn--dark-blue">Request a Quote</button>
+                    <Link to="/contact" className="btn btn--dark-blue">Request a Quote</Link>
                 </div>
             </div>
         </section>

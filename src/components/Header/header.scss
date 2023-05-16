@@ -35,10 +35,6 @@
         display: flex;
         align-items: center;
 
-        nav {
-            margin-right: 20px;
-        }
-
         ul {
             display: flex;
         }
@@ -47,10 +43,11 @@
             margin-left: 20px;
         }
 
-        a:hover {
-            color: #0864dc;
+        li:nth-last-child(n+2) {
+            a:hover {
+                color: #0864dc;
+            }
         }
-
     }
 }
 

@@ -26,7 +26,7 @@ const Header = () => {
             <div className="shell">
                 <div className="header__inner">
                     <div className="header__logo">
-                        <Link>
+                        <Link to="/">
                             <img src={logo} alt="" width="1000" height="186" />
                         </Link>
                     </div>
@@ -35,20 +35,22 @@ const Header = () => {
                         <nav>
                             <ul>
                                 <li>
-                                    <Link>Services</Link>
+                                    <Link to="/services">Services</Link>
                                 </li>
 
                                 <li>
-                                    <Link>Our Work</Link>
+                                    <Link to="/work">Our Work</Link>
                                 </li>
 
                                 <li>
-                                    <Link>About</Link>
+                                    <Link to="/about">About</Link>
+                                </li>
+
+                                <li>
+                                    <Link to="/contact" className='btn btn--blue'>Start your project</Link>
                                 </li>
                             </ul>
                         </nav>
-
-                        <button className='btn btn--blue'>Start your project</button>
                     </div>
                 </div>
             </div>

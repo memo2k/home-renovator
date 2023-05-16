@@ -16,6 +16,8 @@ const Header = () => {
             } else {
                 setHideClass("");
             }
+        } else if (currentScrollPos === 0) {
+            setHideClass("");
         }
 
         prevScrollPos = currentScrollPos;

@@ -183,12 +183,14 @@ body {
 @media (max-width: 1024px) {
     // Body
     body {
+        font-size: 0.7rem;
+
         p {
-            line-height: 24px;
+            line-height: 20px;
         }
 
         h1 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
         }
 
         h2 {
@@ -201,12 +203,11 @@ body {
         margin: 0;
 
         .grid__col {
-            padding: 0;
         }
         
         .grid__col--1of3 {
-            max-width: 100%;
-            flex: 0 0 100%;
+            max-width: 50%;
+            flex: 0 0 50%;
             justify-content: flex-start;
         }
 
@@ -221,9 +222,5 @@ body {
 @media (max-width: 768px) {
     // Grid
     .grid {
-        .grid__col--1of4 {
-            max-width: 100%;
-            flex: 0 0 100%;
-        }
     }
 }

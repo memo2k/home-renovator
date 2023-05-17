@@ -128,7 +128,7 @@
 @media (max-width: 1400px) {
     // Hero
     .hero {
-        padding-top: 6rem;
+        padding-top: 8rem;
 
         .hero__inner {
             display: block;
@@ -196,5 +196,11 @@
         .carousel__testimonials {
             min-height: 450px;
         }
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        padding-top: 6rem;
     }
 }

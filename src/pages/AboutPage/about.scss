@@ -44,7 +44,7 @@
 
 @media (max-width: 1400px) {
     .about {
-        padding-top: 6rem;
+        padding-top: 8rem;
         
         .about__subheading {
             margin-bottom: 10px;
@@ -72,5 +72,11 @@
             width: 90%;
             margin: 0 auto;
         }
+    }
+}
+
+@media (max-width: 1024px) {
+    .about {
+        padding-top: 6rem;
     }
 }

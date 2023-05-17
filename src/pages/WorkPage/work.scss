@@ -12,10 +12,16 @@
 
 @media (max-width: 1400px) {
     .work {
-        padding-top: 6rem;
+        padding-top: 8rem;
     
         .work__subheading {
             margin-bottom: 10px;
         }
+    }
+}
+
+@media (max-width: 1024px) {
+    .work {
+        padding-top: 6rem;
     }
 }

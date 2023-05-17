@@ -79,6 +79,18 @@
 }
 
 @media (max-width: 1024px) {
+    .header {
+        height: 60px;
+
+        .header__inner {
+            height: 60px;
+        }
+
+        .header__logo {
+            width: 180px;
+        }
+    }
+
     .hamburger {
         display: block;
     }
@@ -98,7 +110,7 @@
     .header__nav ul {
         position: fixed;
         left: -100%;
-        top: 90px;
+        top: 50px;
         flex-direction: column;
         background-color: #fff;
         width: 100%;
@@ -120,7 +132,7 @@
     }
 
     .header.hide {
-        transform: translateY(-420%);
+        transform: translateY(-450%);
     }
 
     .header__logo {

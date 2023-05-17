@@ -23,8 +23,8 @@ const servicesProps = [
         description: "Complete kitchen and bathroom renovations are our bread and butter, and we have lost count on how many we have worked on - from smaller renovations to apartment renovations to terraces renovations."
     },
     {
-        firstImg: livingroomImg1,
-        secondImg: livingroomImg2,
+        firstImg: livingroomImg2,
+        secondImg: livingroomImg1,
         heading: "Living Rooms",
         description: "Like the bedroom, colour is making is making its way into our living rooms. You can do this using paint, artworks or with accessories or soft furnishings like cushions, rugs and window treatments."
     },

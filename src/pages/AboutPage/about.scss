@@ -41,3 +41,36 @@
         }
     }
 }
+
+@media (max-width: 1400px) {
+    .about {
+        padding-top: 8rem;
+        
+        .about__subheading {
+            margin-bottom: 10px;
+        }
+
+        .about__content {
+            display: block;
+        }
+
+        .about__info {
+            width: 100%;
+            margin-bottom: 30px;
+            text-align: center;
+
+            .about__description {
+                margin: 0 auto;
+            }
+
+            .about__info-subheading, .about__info-heading  {
+                margin-bottom: 10px;
+            }
+        }
+
+        .about__image {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}

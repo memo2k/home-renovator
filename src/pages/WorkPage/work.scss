@@ -9,3 +9,13 @@
         margin-bottom: 50px;
     }
 }
+
+@media (max-width: 1400px) {
+    .work {
+        padding-top: 8rem;
+    
+        .work__subheading {
+            margin-bottom: 10px;
+        }
+    }
+}

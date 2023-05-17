@@ -5,6 +5,10 @@
     padding: 10rem 0;
     max-width: 900px;
     margin: 0 auto;
+
+    .contact-form__inner {
+        padding: 0 15px;
+    }
 }
 
 /**
@@ -65,6 +69,28 @@
 
         .form__row + .form__row {
             margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    // Contact Form
+    .contact-form {
+        padding-bottom: 4rem;
+        padding-top: 8rem;
+    }
+
+    // Form
+    .form {
+        .form__body {
+            .form__row {
+                display: block;
+            }
+            
+            .form__field + .form__field {
+                margin-left: 0;
+                margin-top: 20px;
+            }
         }
     }
 }

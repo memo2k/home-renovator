@@ -16,7 +16,7 @@
 .card-services {
     display: flex;
     justify-content: space-between;
-    height: 650px;
+    min-height: 650px;
 
     .card__images {
         position: relative;
@@ -24,7 +24,7 @@
 
         .card__image {
             position: absolute;
-            width: 400px;
+            max-width: 400px;
 
             img {
                 width: 100%;
@@ -51,6 +51,48 @@
         justify-content: center;
 
         .card__heading {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    // Services
+    .services {
+        padding-top: 8rem;
+        
+        .services__subheading {
+            margin-bottom: 10px;
+        }
+    }
+
+    // Card Services
+    .card-services {
+        display: block;
+        min-height: 250px;
+        margin-bottom: 50px;
+
+        .card__images {
+            width: 100%;
+            margin-bottom: 30px;
+
+            .card__image {
+                position: relative;
+                max-width: 100%;
+            }
+
+            .card__image:first-child {
+                top: 0;
+                left: 0;
+            }
+
+            .card__image:last-child {
+                display: none;
+            }
+        }
+
+        .card__description {
+            width: 100%;
             margin-bottom: 30px;
         }
     }
